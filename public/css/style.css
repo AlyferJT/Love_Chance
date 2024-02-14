@@ -1,0 +1,149 @@
+@import url('https://fonts.googleapis.com/css2?family=VT323&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    font-size: 62,5%;
+}
+
+body {
+    font-family: "VT323", monospace;
+    background-color: rgb(255, 255, 255);
+}
+
+.header {
+    width: 100%;
+    height: 5rem;
+    background-color: rgb(253, 223, 240);
+
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    
+}
+
+.header-left {
+    display: flex;
+}
+
+.header-left-image {
+    width: 2.5rem;
+    padding-left: .6rem;
+    animation: animate-heart 1.4s infinite;
+}
+
+.header-right-img {
+    width: 2.5rem;
+    transition: transform .2s;
+}
+
+.header-right-img:hover {
+    transform: scale(1.1);
+}
+
+.main {
+    margin-top: 6rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.main-left {
+    width: 25rem;
+    font-size: 2rem;
+    margin-right: 5rem;
+}
+
+.main-right-form {
+    display: flex;
+    flex-direction: column;
+}
+
+.main-right-item {
+    margin-top: 1rem;
+}
+
+.main-right-textinput {
+    padding: .8rem;
+    color: rgb(194, 64, 138);
+    border: .15rem solid rgb(253, 223, 240);
+    border-radius: .5rem;
+    outline: none;
+}
+
+.main-right-textinput::placeholder {
+    color: rgb(179, 59, 127);
+}
+
+.main-right-submit {
+    padding: 1rem .6rem;
+    border: 1.5px solid rgb(253, 223, 240);
+    background-color: rgba(255, 255, 255, 0);
+    color: rgb(179, 59, 127);
+    border-radius: .5rem;
+}
+
+.main-right-submit:hover {
+    cursor: pointer;
+}
+
+.result {
+    margin-top: 2rem;
+    font-size: 1.5rem;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    animation: show 3s;
+    padding-bottom: 4rem;
+}
+
+@keyframes show {
+    0% {
+        opacity: 0;   
+    }    
+
+    100% {
+        opacity: 100;
+    }
+}
+
+
+@keyframes animate-heart {
+    0% {
+        transform: scale(1);
+    }
+
+    10% {
+        transform: scale(1.3);
+    }
+
+    20% {
+        transform: scale(1);
+    }
+
+    30% {
+        transform: scale(1.3);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}
+
+@media (max-width: 760px) {
+    .main {
+        margin-top: 2rem;
+        flex-direction: column;
+    }
+
+    .main-left {
+        margin: 0;
+        text-align: center;
+        width: 20rem;
+    }
+}

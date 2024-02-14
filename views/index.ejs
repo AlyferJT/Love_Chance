@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="shortcut icon" href="./images/heart.png" type="image/png">
+
+    <title>Love Chance</title>
+</head>
+<body>
+    <header class="header">
+        <div class="header-left">
+            <h1 class="header-left-title">Love Chance</h1>
+            <img class="header-left-image" src="./images/heart.png" alt="heart png">
+        </div>
+        <div class="header-right">
+            <a href="https://github.com/AlyferJT" target="_blank">
+                <img class="header-right-img" src="./images/github.png" alt="github logo">
+            </a>
+        </div>
+    </header>
+
+    <main class="main">
+        <section class="main-left">
+            <p class="main-left-p-one">Do you want to know what's your chance of getting together with the one you like? ♥</p>
+            <p class="main-left-p-two">Just tell us your name</p>
+        </section>
+        <section class="main-right">
+
+            <form class="main-right-form" action="/love-test" method="POST">
+                <input class="main-right-item main-right-textinput" placeholder="Your name" type="text" name="fname" required>
+                <input class="main-right-item main-right-textinput" placeholder="His/her name" type="text" name="sname" required>
+                <input class="main-right-item main-right-submit" type="submit" value="Calcute Love ♥">
+            </form>
+
+        </section>
+    </main>
+
+    <% if (locals.text) {%>
+    <section class="result">
+        <h3 class="result-h3"><%= percentage %></h3>
+        <p class="result-p"><%= text %></p>
+    </section>
+    <% } else {} %>
+
+</body>
+</html>
